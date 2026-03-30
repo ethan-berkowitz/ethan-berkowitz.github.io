@@ -1,17 +1,118 @@
 .navbar {
   display: flex;
   gap: 2rem;
+  margin: 2rem 4rem;
   padding: 1rem 2rem;
-  background: #111;
+  background: #4b5b48;
+  border-radius: 4px;
 }
 
 .navbar a {
   color: #ccc;
   text-decoration: none;
+  font-family: 'Verdana', Tahoma, sans-serif;
   font-size: 1rem;
 }
 
 .navbar a.active {
   color: white;
   font-weight: bold;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  padding-top: 1rem;
+  border: 8px solid #898989;
+  background: #e2e2e2;
+  border-radius: 8px;
+  width: 300px;
+  height: 420px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  border-color: #4d4d4d;
+}
+
+.project-card > img {
+  width: 100%;
+  border: 2px solid #252525;
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: 250px;
+  object-fit: cover;
+}
+
+.project-card h1 {
+  margin-top: -10px;
+  margin-bottom: 2px;
+  padding-left: 4px;
+  border: 2px solid #444444;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+/* REMOVED the old .project-card h3 block and replaced with these two: */
+
+.project-card-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid #444444;
+  border-radius: 4px;
+  padding-left: 4px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.project-card-type h2 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.project-card h3 {
+  margin-top: -10px;
+  margin-bottom: 0px;
+  padding-left: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.6rem;
+}
+
+.type-icon {
+  height: 16px;
+  width: 16px;
+  object-fit: contain;
+  border: none !important;
+  border-radius: 0 !important;
+  margin-right: 4px;
+}
+
+.project-card p {
+  margin-top: 0px;
+  padding-left: 4px;
+  border: 2px solid #444444;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: regular;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
 }
