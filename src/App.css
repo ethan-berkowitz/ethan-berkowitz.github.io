@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'MagicCards';
+  src: url('/fonts/Matrix-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MagicCardsRegular';
+  src: url('/fonts/Matrix-Regular.ttf') format('truetype');
+}
+
 .navbar {
   display: flex;
   gap: 2rem;
@@ -53,10 +63,13 @@
 .project-card h1 {
   margin-top: -10px;
   margin-bottom: 2px;
+  padding-top: 3px;
+  padding-bottom: 1px;
   padding-left: 4px;
   border: 2px solid #444444;
   border-radius: 4px;
   text-decoration: none;
+  font-family: 'MagicCards';
   font-weight: bold;
   font-size: 1.3rem;
 }
@@ -75,14 +88,18 @@
 }
 
 .project-card-type h2 {
+  font-family: 'MagicCards';
+  padding-top: 3px;
+  padding-bottom: 1px;
   margin: 0;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .project-card h3 {
-  margin-top: -10px;
-  margin-bottom: 0px;
+  font-family: 'MagicCards';
+  margin-top: -13px;
+  margin-bottom: -6px;
   padding-left: 4px;
   text-decoration: none;
   font-weight: bold;
@@ -93,18 +110,19 @@
   height: 16px;
   width: 16px;
   object-fit: contain;
-  border: none !important;
-  border-radius: 0 !important;
+  border: none;
+  border-radius: 0;
   margin-right: 4px;
 }
 
 .project-card p {
+  font-family: 'MagicCardsRegular';
+  padding-top: 3px;
   margin-top: 0px;
   padding-left: 4px;
   border: 2px solid #444444;
   border-radius: 4px;
   text-decoration: none;
-  font-weight: regular;
   font-size: 1rem;
   flex: 1;
 }
