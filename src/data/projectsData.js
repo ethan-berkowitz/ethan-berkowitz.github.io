@@ -7,7 +7,7 @@ const projects = [
     description: "Dream of fish and then eat those fish. Repeat.",
     typeIcon: "/assets/sleepy_cat/sleepy_cat_icon.png",
     bottomText: "001 - Made with GameMaker",
-    tags: ["Game", "GameMaker"],
+    tags: ["Games", "GameMaker"],
   },
   {
     id: "tower-archer",
@@ -17,7 +17,7 @@ const projects = [
     description: "Defend your castle against a never ending wave of enemies.",
     typeIcon: "/assets/tower_archer_icon.png",
     bottomText: "002 - Made with GameMaker",
-    tags: ["Game", "GameMaker"],
+    tags: ["Games", "GameMaker"],
   },
   {
     id: "arcade-baseball",
@@ -27,7 +27,7 @@ const projects = [
     description: "Pinball-inspired baseball arcade game.",
     typeIcon: "/assets/arcade_baseball_icon.png",
     bottomText: "003 - Made with Unity",
-    tags: ["Game", "Unity", "C#"],
+    tags: ["Games", "Unity", "C#"],
   },
   {
     id: "pattern-recall",
@@ -37,7 +37,7 @@ const projects = [
     description: "Memorize a sequence of patterns.",
     typeIcon: "/assets/pattern_recall_icon.png",
     bottomText: "004 - Made with Godot",
-    tags: ["Game", "Godot", "GDScript"],
+    tags: ["Games", "Godot", "GDScript"],
   },
   {
     id: "tilda-rose-portfolio",
@@ -47,7 +47,7 @@ const projects = [
     description: "A portfolio website for a Helsinki based Illustrator.",
     typeIcon: "/assets/tilda_rose_icon.png",
     bottomText: "005 - Made with HTML, CSS, and Javascript",
-    tags: ["Website", "HTML", "CSS", "Javascript"],
+    tags: ["Websites", "HTML", "CSS", "Javascript"],
   },
   {
     id: "nginy",

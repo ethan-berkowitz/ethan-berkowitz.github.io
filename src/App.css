@@ -189,3 +189,82 @@
   justify-content: center;
   padding: 2rem;
 }
+
+.projects-layout {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.filter-sidebar {
+  width: 200px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 184px;
+}
+
+.filter-section {
+  margin-bottom: 24px;
+  margin-left: 20px;
+}
+
+.filter-heading {
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding-bottom: 8px;
+  margin: 0 0 10px;
+  border-bottom: 1px solid
+}
+
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.check-item input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.check-item label {
+  font-size: 13px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.filter-count {
+  font-size: 11px;
+}
+
+.results-count {
+  font-size: 13px;
+  margin-bottom: 0px;
+  margin-left: 36px;
+}
+
+.clear-filters-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 12px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.no-results {
+  grid-column: 1 / -1;
+}
