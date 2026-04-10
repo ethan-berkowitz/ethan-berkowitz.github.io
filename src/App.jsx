@@ -25,7 +25,6 @@ function App() {
         </a>
       </footer>
     </BrowserRouter>
-
   )
 }
 
