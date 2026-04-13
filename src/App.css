@@ -304,3 +304,7 @@
   text-decoration: underline;
   font-family: 'Verdana', Tahoma, sans-serif;
 }
+
+.page-bg {
+  margin-top: 40px;
+}

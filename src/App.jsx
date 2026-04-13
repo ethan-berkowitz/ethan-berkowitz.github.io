@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom'
 import Projects from './pages/Projects'
 import About from './pages/About'
+import Pong from './pages/Pong'
 import './App.css'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Projects />} />
         <Route path="/about" element={<About />} />
+        <Route path="/pong" element={<Pong />} />
       </Routes>
 
       <footer className="icon-footer">
