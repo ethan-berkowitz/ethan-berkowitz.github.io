@@ -44,8 +44,8 @@ export const game = {
 	username: {
 		p1: "P1",
 		p2: "P2",
-		p2Display: "P1",
-		p1Display: "P2",
+		p1Display: "Player 1",
+		p2Display: "Player 2",
 	},
 
 	score: {

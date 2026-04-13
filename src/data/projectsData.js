@@ -66,6 +66,17 @@ const projects = [
     link: "https://github.com/ethan-berkowitz/DoomClone"
   },
   {
+    id: "pong",
+    title: "Pong 3D",
+    image: "/assets/pong.png",
+    type: "Game - Arcade",
+    description: "A 3D recreation of the classic Pong game.",
+    typeIcon: "/assets/pong_icon.png",
+    bottomText: "2025 - Made with Babylon.js, JavaScript, and React",
+    tags: ["Games", "Javascript", "Babylon.js", "React"],
+    link: "/pong"
+  },
+  {
     id: "nginy",
     title: "NGINY",
     image: "/assets/NGINY.png",
@@ -87,7 +98,6 @@ const projects = [
     tags: ["Games", "GameMaker", "OpenAI"],
     link: "https://ethanberko.itch.io/samur"
   },
-
   {
     id: "fullstack",
     title: "Multiplayer Pong Website",
