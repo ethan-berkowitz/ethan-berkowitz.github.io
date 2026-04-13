@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useRef, useEffect } from 'react'
 import ProjectCard from '../components/ProjectCard'
 import projects from '../data/projectsData'
 
@@ -7,38 +7,54 @@ const TYPE_TAGS = new Set(['Games', 'Websites', 'Other'])
 function getFilterOptions(projects) {
   const types = {}
   const languages = {}
-
   projects.forEach(({ tags }) => {
     tags.forEach(tag => {
-      if (TYPE_TAGS.has(tag)) {
-        types[tag] = (types[tag] || 0) + 1
-      } else {
-        languages[tag] = (languages[tag] || 0) + 1
-      }
+      if (TYPE_TAGS.has(tag)) types[tag] = (types[tag] || 0) + 1
+      else languages[tag] = (languages[tag] || 0) + 1
     })
   })
-
   return { types, languages }
 }
 
-function FilterSection({ heading, options, selected, onChange }) {
+function DropdownFilter({ label, options, selected, onChange }) {
+  const [open, setOpen] = useState(false)
+  const ref = useRef(null)
+
+  useEffect(() => {
+    function handleClick(e) {
+      if (ref.current && !ref.current.contains(e.target)) setOpen(false)
+    }
+    document.addEventListener('mousedown', handleClick)
+    return () => document.removeEventListener('mousedown', handleClick)
+  }, [])
+
+  const activeCount = Object.keys(options).filter(t => selected.has(t)).length
+
   return (
-    <div className="filter-section">
-      <h3 className="filter-heading">{heading}</h3>
-      <ul className="check-list">
-        {Object.entries(options).sort().map(([tag, count]) => (
-          <li key={tag} className="check-item">
-            <input
-              type="checkbox"
-              id={`filter-${tag}`}
-              checked={selected.has(tag)}
-              onChange={() => onChange(tag)}
-            />
-            <label htmlFor={`filter-${tag}`}>{tag}</label>
-            <span className="filter-count">{count}</span>
-          </li>
-        ))}
-      </ul>
+    <div className="dropdown-filter" ref={ref}>
+      <button
+        className={`dropdown-trigger${activeCount > 0 ? ' active' : ''}`}
+        onClick={() => setOpen(o => !o)}
+      >
+        {label}
+        {activeCount > 0 && <span className="dropdown-badge">{activeCount}</span>}
+        <span className="dropdown-arrow">{open ? '▲' : '▼'}</span>
+      </button>
+      {open && (
+        <div className="dropdown-menu">
+          {Object.entries(options).sort().map(([tag, count]) => (
+            <label key={tag} className="dropdown-item">
+              <input
+                type="checkbox"
+                checked={selected.has(tag)}
+                onChange={() => onChange(tag)}
+              />
+              <span>{tag}</span>
+              <span className="filter-count">{count}</span>
+            </label>
+          ))}
+        </div>
+      )}
     </div>
   )
 }
@@ -46,14 +62,19 @@ function FilterSection({ heading, options, selected, onChange }) {
 export default function Projects() {
   const [selectedTypes, setSelectedTypes] = useState(new Set())
   const [selectedLangs, setSelectedLangs] = useState(new Set())
-
   const { types, languages } = useMemo(() => getFilterOptions(projects), [])
 
-  function toggle(set, setFn, tag) {
-    setFn(prev => {
-      const next = new Set(prev)
-      next.has(tag) ? next.delete(tag) : next.add(tag)
-      return next
+  function selectType(tag) {
+    setSelectedTypes(prev => {
+      if (prev.has(tag)) return new Set()
+      return new Set([tag])
+    })
+  }
+
+  function selectLang(tag) {
+    setSelectedLangs(prev => {
+      if (prev.has(tag)) return new Set()
+      return new Set([tag])
     })
   }
 
@@ -75,52 +96,44 @@ export default function Projects() {
   return (
     <div className="projects-page">
       <h1 className="page-title">Projects</h1>
-      <div className="projects-layout">
 
-        <aside className="filter-sidebar">
-          <FilterSection
-            heading="Type"
-            options={types}
-            selected={selectedTypes}
-            onChange={tag => toggle(selectedTypes, setSelectedTypes, tag)}
-          />
-          <FilterSection
-            heading="Language / Engine"
-            options={languages}
-            selected={selectedLangs}
-            onChange={tag => toggle(selectedLangs, setSelectedLangs, tag)}
-          />
-          {hasFilters && (
-            <button className="clear-filters-btn" onClick={clearAll}>
-              Clear all filters
-            </button>
-          )}
-        </aside>
+      <div className="filters-bar">
+        <DropdownFilter
+          label="Type"
+          options={types}
+          selected={selectedTypes}
+          onChange={selectType}
+        />
+        <DropdownFilter
+          label="Language / Engine"
+          options={languages}
+          selected={selectedLangs}
+          onChange={selectLang}
+        />
+        {hasFilters && (
+          <button className="clear-filters-btn" onClick={clearAll}>
+            Clear filters
+          </button>
+        )}
+      </div>
 
-        <main className="projects-main">
-          <p className="results-count">
-            Showing {filtered.length} of {projects.length} projects
-          </p>
-          <div className="projects-grid">
-            {filtered.length > 0 ? (
-              filtered.map(project => (
-                <ProjectCard
-                  key={project.id}
-                  title={project.title}
-                  image={project.image}
-                  type={project.type}
-                  description={project.description}
-                  typeIcon={project.typeIcon}
-                  bottomText={project.bottomText}
-                  link={`/projects/${project.id}`}
-                />
-              ))
-            ) : (
-              <p className="no-results">No projects match the selected filters.</p>
-            )}
-          </div>
-        </main>
-
+      <div className="projects-grid">
+        {filtered.length > 0 ? (
+          filtered.map(project => (
+            <ProjectCard
+              key={project.id}
+              title={project.title}
+              image={project.image}
+              type={project.type}
+              description={project.description}
+              typeIcon={project.typeIcon}
+              bottomText={project.bottomText}
+              link={`/projects/${project.id}`}
+            />
+          ))
+        ) : (
+          <p className="no-results">No projects match the selected filters.</p>
+        )}
       </div>
     </div>
   )
