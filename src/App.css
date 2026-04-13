@@ -23,7 +23,7 @@
 
 .navbar a {
   color: #000000;
-  font-family: 'Arial';
+  font-family: 'Karla';
   font-size: 1rem;
   text-decoration: none;
   font-weight: bold;
@@ -32,8 +32,8 @@
 .navbar a.active {
   color: rgb(236, 95, 95);
   text-decoration: underline;
-  text-underline-offset: 6px;
-  text-decoration-thickness: 3px;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
 }
 
 .icon-footer {
@@ -54,6 +54,7 @@
 
 .page-title {
   color: rgb(236, 95, 95);
+  font-family: 'Syne';
   font-size: 60px;
   text-align: center;
   margin: 0%;
