@@ -128,7 +128,7 @@ export default function Projects() {
               description={project.description}
               typeIcon={project.typeIcon}
               bottomText={project.bottomText}
-              link={`/projects/${project.id}`}
+              link={project.link}
             />
           ))
         ) : (

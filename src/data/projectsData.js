@@ -8,6 +8,7 @@ const projects = [
     typeIcon: "/assets/tower_archer_icon.png",
     bottomText: "2024 - Made with GameMaker",
     tags: ["Games", "GameMaker"],
+    link: "https://ethanberko.itch.io/tower-archer"
   },
   {
     id: "tilda-rose-portfolio",
@@ -18,6 +19,7 @@ const projects = [
     typeIcon: "/assets/tilda_rose_icon.png",
     bottomText: "2025 - Made with HTML, CSS, and Javascript",
     tags: ["Websites", "HTML", "CSS", "Javascript"],
+    link: "https://tildaroseillustration.com/"
   },
   {
     id: "pattern-recall",
@@ -28,6 +30,7 @@ const projects = [
     typeIcon: "/assets/pattern_recall_icon.png",
     bottomText: "2026 - Made with Godot",
     tags: ["Games", "Godot", "GDScript"],
+    link: "https://ethanberko.itch.io/pattern-recall"
   },
   {
     id: "sleepy-cat",
@@ -38,6 +41,7 @@ const projects = [
     typeIcon: "/assets/sleepy_cat/sleepy_cat_icon.png",
     bottomText: "2025 - Made with GameMaker",
     tags: ["Games", "GameMaker"],
+    link: "https://ethanberko.itch.io/sleepy-cat"
   },
   {
     id: "arcade-baseball",
@@ -48,6 +52,7 @@ const projects = [
     typeIcon: "/assets/arcade_baseball_icon.png",
     bottomText: "2025 - Made with Unity",
     tags: ["Games", "Unity", "C#"],
+    link: "https://ethanberko.itch.io/arcade-baseball"
   },
   {
     id: "doomclone",
@@ -58,6 +63,7 @@ const projects = [
     typeIcon: "/assets/doomclone_icon.png",
     bottomText: "2025 - Made with C",
     tags: ["Games", "C", "miniLibX"],
+    link: "https://github.com/ethan-berkowitz/DoomClone"
   },
   {
     id: "nginy",
@@ -68,6 +74,7 @@ const projects = [
     typeIcon: "/assets/NGINY_icon.png",
     bottomText: "2025 - Made with C++, Python, and HTML",
     tags: ["Other", "C++", "Python", "HTML"],
+    link: "https://github.com/ethan-berkowitz/NGINY"
   },
   {
     id: "samur",
@@ -78,6 +85,7 @@ const projects = [
     typeIcon: "/assets/samur_icon.png",
     bottomText: "2025 - Made with GameMaker",
     tags: ["Games", "GameMaker", "OpenAI"],
+    link: "https://ethanberko.itch.io/samur"
   },
 
   {
@@ -89,6 +97,7 @@ const projects = [
     typeIcon: "/assets/fullstack_icon.png",
     bottomText: "2025 - Made with Javascript, Typescript, Babylon.js,  and React",
     tags: ["Other", "Javascript", "Typescript", "Babylon.js", "React"],
+    link: "https://github.com/ethan-berkowitz/transcendence"
   },
 ];
 
