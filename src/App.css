@@ -229,6 +229,9 @@
   font-weight: bold;
   cursor: pointer;
   transition: background 0.15s ease;
+  height: 34px;        /* add this */
+  box-sizing: border-box; /* add this */
+  position: relative;
 }
 
 .dropdown-trigger:hover {
@@ -250,6 +253,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;  /* add this */
+  top: -6px;           /* add this */
+  right: -6px;         /* add this */
 }
 
 .dropdown-arrow {
@@ -312,4 +318,8 @@
 .loading-game {
   text-align: center;
   margin-top: 170px;
+}
+
+html {
+  overflow-y: scroll;
 }
