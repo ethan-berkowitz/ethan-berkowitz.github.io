@@ -35,7 +35,7 @@ const projects = [
   {
     id: "sleepy-cat",
     title: "Sleepy Cat",
-    image: "/assets/sleepy_cat/sleepy_cat_card.png",
+    image: "/assets/sleepy_cat.png",
     type: "Game - Idle Clicker",
     description: "Dream of fish and then eat those fish. Repeat.",
     typeIcon: "/assets/sleepy_cat/sleepy_cat_icon.png",
