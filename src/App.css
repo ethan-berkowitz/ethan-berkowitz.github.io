@@ -375,14 +375,18 @@ html {
 .skill-group {
   margin-bottom: 14px;
 }
-.skill-group:last-child { margin-bottom: 5; }
+
+.skill-group:last-child {
+  margin-bottom: 5;
+}
 
 .skill-group-label {
-  font-family: 'Syne', sans-serif;
-  font-size: 0.76rem;
-  letter-spacing: 0.1em;
+  font-family: 'Karla', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: rgb(0, 0, 0);
+  color: #ed5e5e;
   margin-bottom: 8px;
   border-bottom: 1.5px solid #e0dbd0;
   padding-bottom: 4px;
@@ -395,14 +399,12 @@ html {
 }
 
 .skill-tag {
-  background-color: #1a1a1a;
-  background-position: center;
-  background-size: cover;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #000000;
   font-family: 'Karla', sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 700;
   padding: 3px 11px;
   border-radius: 3px;
-  border: 1.5px solid #444444;
+  border: 2px solid #3f3f3f;
 }
