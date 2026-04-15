@@ -47,7 +47,7 @@ function DropdownFilter({ label, options, selected, onChange }) {
               <input
                 type="checkbox"
                 checked={selected.has(tag)}
-                onChange={() => onChange(tag)}
+                onChange={() => { onChange(tag); setOpen(false) }}
               />
               <span>{tag}</span>
               <span className="filter-count">{count}</span>
