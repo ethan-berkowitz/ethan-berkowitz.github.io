@@ -334,7 +334,7 @@ html {
 }
 
 .about-card {
-  background: #e7e7e7;
+  background: #ffffff;
   border: 2.5px solid #252525;
   border-radius: 6px;
   overflow: hidden;
@@ -342,11 +342,12 @@ html {
 }
 
 .about-card.bio {
+  margin-top: 60px;
   grid-column: 1 / -1;
 }
 
 .card-header {
-  background-image: url('/assets/Vintage-Sketch-Pad-Darkest.jpg');
+  background: #ed5e5e;
   background-position: center;
   background-size: cover;
   padding: 1px 16px 1px;
@@ -365,6 +366,7 @@ html {
 }
 
 .bio .card-body p {
+  font-family: 'Karla', sans-serif;
   font-size: 1.05rem;
   line-height: 1.75;
   color: #1a1a1a;
@@ -377,11 +379,10 @@ html {
 
 .skill-group-label {
   font-family: 'Syne', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 700;
+  font-size: 0.76rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgb(236, 95, 95);
+  color: rgb(0, 0, 0);
   margin-bottom: 8px;
   border-bottom: 1.5px solid #e0dbd0;
   padding-bottom: 4px;
@@ -394,10 +395,10 @@ html {
 }
 
 .skill-tag {
-  background-image: url('/assets/Vintage-Sketch-Pad-Highlight.jpg');
+  background-color: #1a1a1a;
   background-position: center;
   background-size: cover;
-  color: #1a1a1a;
+  color: #ffffff;
   font-family: 'Karla', sans-serif;
   font-size: 0.8rem;
   font-weight: 700;
