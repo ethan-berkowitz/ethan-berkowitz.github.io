@@ -338,7 +338,6 @@ html {
   border: 2.5px solid #252525;
   border-radius: 6px;
   overflow: hidden;
-  box-shadow: 4px 4px 0px #252525;
 }
 
 .about-card.bio {
@@ -370,6 +369,8 @@ html {
   font-size: 1.05rem;
   line-height: 1.75;
   color: #1a1a1a;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .skill-group {
@@ -407,4 +408,14 @@ html {
   padding: 3px 11px;
   border-radius: 3px;
   border: 2px solid #3f3f3f;
+}
+
+@media (max-width: 1000px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-card.bio {
+    grid-column: 1;
+  }
 }

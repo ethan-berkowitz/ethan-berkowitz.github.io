@@ -10,9 +10,13 @@ export default function About() {
           <div className="card-header"><h2>Bio</h2></div>
           <div className="card-body">
             <p>
-              I'm a game and software developer based in Helsinki. Currently I am studying at
-              Hive Helsinki, where I have learned to code in C and C++ while collaborating
-              closely with my peers.
+              Hello website visitor. My name is Ethan Berkowitz.
+              I am programmer currently living in Helsinki, Finland.
+              I recently graduated from Hive Helsinki Coding School.
+              I am interested in game design, game design, game programming,
+              quality assurance, and web development. Please reach out to me by email
+              for any inquiries!
+              
             </p>
           </div>
         </div>
@@ -56,7 +60,7 @@ export default function About() {
             <div className="skill-group">
               <div className="skill-group-label">Music Performance</div>
               <div className="skill-tags">
-                {["Jazz Piano", "Drum Set"].map(s => (
+                {["Piano", "Drum Set"].map(s => (
                   <span key={s} className="skill-tag">{s}</span>
                 ))}
               </div>
@@ -65,7 +69,7 @@ export default function About() {
             <div className="skill-group">
               <div className="skill-group-label">Music Production</div>
               <div className="skill-tags">
-                {["Composition", "Logic X", "Pro Tools", "Pure Data"].map(s => (
+                {["Composition", "Recording", "Logic X", "Pro Tools", "Ableton", "Pure Data"].map(s => (
                   <span key={s} className="skill-tag">{s}</span>
                 ))}
               </div>
