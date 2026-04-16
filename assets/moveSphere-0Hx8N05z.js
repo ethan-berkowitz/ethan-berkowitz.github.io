@@ -1,0 +1,1 @@
+function e(e){let t=e.engine.getDeltaTime()/1e3;e.sphere.position.addInPlace(e.move.direction.scale(e.move.ballSpeed*t))}export{e as moveSphere};

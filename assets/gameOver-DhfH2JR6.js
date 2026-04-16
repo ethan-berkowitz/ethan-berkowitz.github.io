@@ -1,0 +1,1 @@
+function e(e){e.gameOverFinalText.setEnabled(!0),e.gameOverScoreText.setEnabled(!0),e.light.final.setEnabled(!0)}export{e as gameOver};
