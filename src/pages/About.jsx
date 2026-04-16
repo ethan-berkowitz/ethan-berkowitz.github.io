@@ -11,9 +11,9 @@ export default function About() {
           <div className="card-body">
             <p>
               Hello website visitor. My name is Ethan Berkowitz.
-              I am programmer currently living in Helsinki, Finland.
+              I am a programmer currently living in Helsinki, Finland.
               I recently graduated from Hive Helsinki Coding School.
-              I am interested in game design, game design, game programming,
+              I am interested in game design, game programming,
               quality assurance, and web development. Please reach out to me by email
               for any inquiries!
               
@@ -78,6 +78,11 @@ export default function About() {
           </div>
         </div>
 
+      </div>
+      <div className="contact-container">
+        <a href="mailto:ethanberko@gmail.com" className="email-button">
+          Contact by Email
+        </a>
       </div>
     </div>
   );
