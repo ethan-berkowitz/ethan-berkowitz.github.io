@@ -85,7 +85,6 @@ export default function BabylonGame() {
               break;
             case game.state.gameOver:
               gameOver(game);
-              setIsGameOver(true);
               break;
           }
 
@@ -125,34 +124,37 @@ export default function BabylonGame() {
   };
 
   return (
-    <div className="page-bg flex flex-col items-center justify-center min-h-screen w-screen">
-      {isLoading && (
-        <div className="loading-game">
-          Loading game...
-        </div>
-      )}
-      <canvas
-        ref={canvasRef}
-        tabIndex={0}
-        width="1280"
-        height="720"
-        id="renderCanvas"
-        style={{
-          display: isLoading ? 'none' : 'block',
-          outline: 'none'
-        }}
-      />
-      {isGameOver && (
-        <div className="absolute bottom-10">
-          <Button 
-            variant="primary" 
-            size="lg"
-            onClick={handleReturnToTournament}
-          >
-            Return to Tournament
-          </Button>
-        </div>
-      )}
-    </div>
-  );
+      <div className="page-bg flex flex-col items-center justify-center min-h-screen w-screen">
+        <h1 className="page-title">3D Pong</h1>
+        
+        {isLoading && (
+          <div className="loading-game">
+            Loading game...
+          </div>
+        )}
+
+        <canvas
+          ref={canvasRef}
+          tabIndex={0}
+          width="1280"
+          height="720"
+          id="renderCanvas"
+          style={{
+            display: isLoading ? 'none' : 'block',
+            outline: 'none',
+            marginTop: '40px'
+          }}
+        />
+        {!isLoading && (
+          <p className="mt-6 text-center text-white/80">
+            <strong>Controls</strong><br/>
+            Player 1 - WS<br />
+            Player 2 - ↑↓<br/>
+            Reset Game - Refresh page<br/><br/>
+            <strong>Goal</strong><br/>
+            First player to score 5 points wins!
+          </p>
+        )}
+      </div>
+    );
 }
