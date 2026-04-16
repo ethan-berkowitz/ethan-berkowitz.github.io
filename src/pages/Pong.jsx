@@ -25,12 +25,9 @@ export default function BabylonGame() {
       }
     };
 
-    const preventScrollWheel = (e) => {
-      if (document.activeElement === canvasRef.current) e.preventDefault();
-    };
+
 
     window.addEventListener('keydown', preventScrollKeys, { passive: false });
-    window.addEventListener('wheel', preventScrollWheel, { passive: false });
 
     // Initialize Game
     const initGame = async () => {
@@ -113,7 +110,6 @@ export default function BabylonGame() {
       initializedRef.current = false;
 
       window.removeEventListener('keydown', preventScrollKeys);
-      window.removeEventListener('wheel', preventScrollWheel);
 
       cleanupPromise?.then((cleanup) => cleanup && cleanup());
     };
