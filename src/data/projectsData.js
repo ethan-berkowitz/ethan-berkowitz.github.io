@@ -1,5 +1,27 @@
 const projects = [
   {
+    id: "spreader",
+    title: "Spreader",
+    image: "/assets/spreader.jpg",
+    type: "Game - Incremental",
+    description: "A hand-drawn incremental clicker. Collect coins, unlock upgrades, and spreader farther! Recently licensed and published on ArmorGames.",
+    typeIcon: "/assets/spreader_icon.png",
+    bottomText: "2026 - Made with Godot",
+    tags: ["Games", "Godot"],
+    link: "https://armorgames.com/spreader-game/19710?fp=ng"
+  },
+  {
+    id: "burger-flipper",
+    title: "Burger Flipper",
+    image: "/assets/burger_flipper.jpg",
+    type: "Game - Simulation",
+    description: "You are a burger chef! Flip burgers, unlock new ingredients and upgrades, and progress to make the MEGA BURGER.",
+    typeIcon: "/assets/burger_flipper_icon.png",
+    bottomText: "2026 - Made with Godot",
+    tags: ["Games", "Godot"],
+    link: "https://ethanberko.itch.io/burger-flipper"
+  },
+  {
     id: "tower-archer",
     title: "Tower Archer",
     image: "/assets/tower_archer.png",
@@ -13,7 +35,7 @@ const projects = [
   {
     id: "tilda-rose-portfolio",
     title: "Illustrator Portfolio",
-    image: "/assets/tilda_rose.png",
+    image: "/assets/tilda_rose.jpg",
     type: "Website - Portfolio",
     description: "A portfolio website for a Helsinki based Illustrator. Features image galleries and responsive web design to work well with browsers or mobile.",
     typeIcon: "/assets/tilda_rose_icon.png",
@@ -35,7 +57,7 @@ const projects = [
   {
     id: "sleepy-cat",
     title: "Sleepy Cat",
-    image: "/assets/sleepy_cat.png",
+    image: "/assets/sleepy_cat.jpg",
     type: "Game - Idle Clicker",
     description: "You are a sleepy cat who likes to dream of fish - and then eat them! Cozy idle gameplay with an emphasis on the visual outcome.",
     typeIcon: "/assets/sleepy_cat/sleepy_cat_icon.png",
@@ -46,7 +68,7 @@ const projects = [
   {
     id: "arcade-baseball",
     title: "Arcade Baseball",
-    image: "/assets/arcade_baseball.png",
+    image: "/assets/arcade_baseball.jpg",
     type: "Game - Sports",
     description: "Pinball-inspired baseball arcade game. Score as many runs as possible in three innings. Try to avoid the out-holes and strikeouts. Hit the ball over the outfield wall for a homerun.",
     typeIcon: "/assets/arcade_baseball_icon.png",
@@ -57,7 +79,7 @@ const projects = [
   {
     id: "doomclone",
     title: "Doom Clone",
-    image: "/assets/doomclone.png",
+    image: "/assets/doomclone.jpg",
     type: "Game - Demo",
     description: "A project inspired by the game Wolfenstein 3D! Implements simple raycasting within a maze, movement, animation, and map with player position.",
     typeIcon: "/assets/doomclone_icon.png",
@@ -79,7 +101,7 @@ const projects = [
   {
     id: "nginy",
     title: "NGINY",
-    image: "/assets/NGINY.png",
+    image: "/assets/NGINY.jpg",
     type: "Server - HTTP",
     description: "A group project about writing our own HTTP/1.1 server. Supports GET, POST, DELETE, status codes, redirections, and CGI scripts.",
     typeIcon: "/assets/NGINY_icon.png",
